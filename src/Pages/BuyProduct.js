@@ -15,14 +15,14 @@ import {
 } from 'reactstrap';
 
 function BuyProduct() {
-  const [id_producto, setIdProduct] = useState(Number)
-  const [cantidad_producto, setCantidadProduct] = useState(Number)
-  const [id_tipo, setIdType] = useState(Number)
+  const [id_producto, setIdProduct] = useState('')
+  const [cantidad_producto, setCantidadProduct] = useState('')
+  const [id_tipo, setIdType] = useState('')
   const [fecha_vencimiento_producto, setFechaVencimientoProduct] = useState('')
   const [fecha_compra, setFechaCompra] = useState('')
   const [lote, setLote] = useState('')
-  const [id_proveedor, setIdProveedor] = useState(Number)
-  const [id_empleado, setIdEmpleado] = useState(Number)
+  const [id_proveedor, setIdProveedor] = useState('')
+  const [id_empleado, setIdEmpleado] = useState('')
   const [productos, setProductos] = useState([])
   const [tipos, setTipos] = useState([])
   const [proveedores, setProveedores] = useState([])
@@ -222,14 +222,14 @@ function BuyProduct() {
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row">
+                  <td >
                     {productos.map((producto) => (
-                      producto.id == id_producto ? producto.nombre : ''
+                      producto.id === id_producto ? producto.nombre : ''
                     ))}
                   </td>
                   <td>
                     {tipos.map((tipo) => (
-                      tipo.id == id_tipo ? tipo.tipo : ''
+                      tipo.id === id_tipo ? tipo.tipo : ''
                     ))}
                   </td>
                   <td>
@@ -243,12 +243,12 @@ function BuyProduct() {
                   </td>
                   <td>
                     {proveedores.map((proveedor) => (
-                      proveedor.id == id_proveedor ? proveedor.nombre_pro : ''
+                      proveedor.id === id_proveedor ? proveedor.nombre_pro : ''
                     ))}
                   </td>
                   <td>
                     {empleados.map((empleado) => (
-                      empleado.id == id_empleado ? <>{empleado.nombre_emp} {empleado.apellido}</> : ''
+                      empleado.id === id_empleado ? <>{empleado.nombre_emp} {empleado.apellido}</> : ''
                     ))}
 
                   </td>
@@ -296,7 +296,7 @@ function BuyProduct() {
       <div id="container" className="container">
         <div className="row g-3">
           <h1 
-          style={{ display: 'flex', justifyContent: 'center', marginTop: '1em', color: '#072', backgroundColor: '#fff', padding: '.5em', borderRadius: '10px', display: 'inline-block' }}
+          style={{ justifyContent: 'center', marginTop: '1em', color: '#072', backgroundColor: '#fff', padding: '.5em', borderRadius: '10px', display: 'inline-block' }}
           >Compras</h1>
           <form className="col-md-12 form-control" onSubmit={handleSubmit}>
             <FormGroup row>

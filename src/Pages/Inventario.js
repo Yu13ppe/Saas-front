@@ -25,11 +25,11 @@ import { XYPlot, XAxis, YAxis, VerticalBarSeries } from 'react-vis';
 
 function Inventario() {
   const [nombre, setNombre] = useState('');
-  const [id_tipo, setTipo] = useState(Number);
-  const [cantidad, setCantidad] = useState(Number);
+  const [id_tipo, setTipo] = useState('');
+  const [cantidad, setCantidad] = useState('');
   const [fecha_vencimiento, setFecha] = useState('');
   const [imagen, setImagen] = useState('');
-  const [id_farmaceuta, setFarmaceuta] = useState(Number);
+  const [id_farmaceuta, setFarmaceuta] = useState('');
 
   const [tipos, setTipos] = useState([]);
   const [tipo, setNewType] = useState('');
@@ -165,7 +165,7 @@ function Inventario() {
             id_farmaceuta
           };
 
-          if (nombre == '' || id_tipo == '' || cantidad == '' || fecha_vencimiento == '' || imagen == '' || id_farmaceuta == '') {
+          if (nombre === '' || id_tipo === '' || cantidad === '' || fecha_vencimiento === '' || imagen === '' || id_farmaceuta === '') {
             setError(true)
           } else {
             await axios.put(`https://joseportillo.000webhostapp.com/saas/api/articulo.php`, data)
@@ -180,7 +180,7 @@ function Inventario() {
         }
       } else {
 
-        if (nombre == '' || id_tipo == '' || cantidad == '' || fecha_vencimiento == '' || imagen == '' || id_farmaceuta == '') {
+        if (nombre === '' || id_tipo === '' || cantidad === '' || fecha_vencimiento === '' || imagen === '' || id_farmaceuta === '') {
           setError(true)
         } else {
           await axios.post(
