@@ -87,7 +87,7 @@ function Inventario() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/articulo.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/articulo.php');
       setProducts(response.data);
     } catch (error) {
       console.log(error);
@@ -96,7 +96,7 @@ function Inventario() {
 
   const fetchTypeData = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/tipo.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/tipo.php');
       setTipos(response.data);
     } catch (error) {
       console.log(error);
@@ -105,7 +105,7 @@ function Inventario() {
 
   const fetchDoctorData = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/farmaceuta.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/farmaceuta.php');
       setDoctor(response.data);
     } catch (error) {
       console.log(error);
@@ -114,7 +114,7 @@ function Inventario() {
 
   const fetchCounterData = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/conteo.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/conteo.php');
       setConteo(response.data);
     } catch (error) {
       console.log(error);
@@ -135,7 +135,7 @@ function Inventario() {
 
   const handleDelete = async id => {
     try {
-      await axios.delete(`https://joseportillo.000webhostapp.com/saas/api/articulo.php`, {
+      await axios.delete(`https://lisandrohr.com/JosePortillo/articulo.php`, {
         data: { id: id }
       })
         .then(function (response) {
@@ -168,7 +168,7 @@ function Inventario() {
           if (nombre === '' || id_tipo === '' || cantidad === '' || fecha_vencimiento === '' || imagen === '' || id_farmaceuta === '') {
             setError(true)
           } else {
-            await axios.put(`https://joseportillo.000webhostapp.com/saas/api/articulo.php`, data)
+            await axios.put(`https://lisandrohr.com/JosePortillo/articulo.php`, data)
               .then(function (response) {
                 console.log(response.data);
               });
@@ -184,7 +184,7 @@ function Inventario() {
           setError(true)
         } else {
           await axios.post(
-            'https://joseportillo.000webhostapp.com/saas/api/articulo.php'
+            'https://lisandrohr.com/JosePortillo/articulo.php'
             , {
               nombre,
               id_tipo,
@@ -213,7 +213,7 @@ function Inventario() {
   const handleSaveType = async () => {
     try {
       await axios.post(
-        'https://joseportillo.000webhostapp.com/saas/api/tipo.php',
+        'https://lisandrohr.com/JosePortillo/tipo.php',
         {
           tipo
         })
@@ -233,7 +233,7 @@ function Inventario() {
   const handleSaveDoc = async () => {
     try {
       await axios.post(
-        'https://joseportillo.000webhostapp.com/saas/api/farmaceuta.php',
+        'https://lisandrohr.com/JosePortillo/farmaceuta.php',
         {
           nombre_doc
         })

@@ -71,7 +71,7 @@ function NavBar(props) {
 
   const fetchEmployData = async () => {
     try {
-      const response = await axios.get('http://localhost/react/Saas/api/empleado.php/');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/empleado.php');
       setEmpleados(response.data);
     } catch (error) {
       console.log(error);
@@ -80,7 +80,7 @@ function NavBar(props) {
 
   const fetchProveedorData = async () => {
     try {
-      const response = await axios.get('http://localhost/react/Saas/api/proveedores.php/');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/proveedores.php');
       setProveedores(response.data);
     } catch (error) {
       console.log(error);

@@ -67,7 +67,7 @@ function BuyProduct() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/articulo.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/articulo.php');
       setProductos(response.data);
 
     } catch (error) {
@@ -77,7 +77,7 @@ function BuyProduct() {
 
   const fetchData2 = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/tipo.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/tipo.php');
       setTipos(response.data);
     } catch (error) {
       console.log(error);
@@ -87,7 +87,7 @@ function BuyProduct() {
 
   const fetchData3 = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/proveedores.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/proveedores.php');
       setProveedores(response.data);
     } catch (error) {
       console.log(error);
@@ -96,7 +96,7 @@ function BuyProduct() {
 
   const fetchData4 = async () => {
     try {
-      const response = await axios.get('https://joseportillo.000webhostapp.com/saas/api/empleado.php');
+      const response = await axios.get('https://lisandrohr.com/JosePortillo/empleado.php');
       setEmpleados(response.data);
     } catch (error) {
       console.log(error);
@@ -106,7 +106,7 @@ function BuyProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://joseportillo.000webhostapp.com/saas/api/compras.php', {
+      await axios.post('https://lisandrohr.com/JosePortillo/compras.php', {
         id_producto,
         cantidad_producto,
         id_tipo,
@@ -132,7 +132,7 @@ function BuyProduct() {
   const handleSubmitProveedor = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://joseportillo.000webhostapp.com/saas/api/proveedores.php', {
+      await axios.post('https://lisandrohr.com/JosePortillo/proveedores.php', {
         nombre_pro,
         rif,
         telefono_pro,
@@ -154,7 +154,7 @@ function BuyProduct() {
   const handleSubmitEmpleado = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://joseportillo.000webhostapp.com/saas/api/empleado.php', {
+      await axios.post('https://lisandrohr.com/JosePortillo/empleado.php', {
         nombre_emp,
         apellido,
         cedula,
